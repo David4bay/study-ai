@@ -9,7 +9,7 @@ from src.common.custom_exception import CustomException
 class QuestionGenerator:
     def __init__(self):
         self.llm = get_groq_llm()
-        self.logger = get_logger(self.___class__.__name__)
+        self.logger = get_logger(self.__class__.__name__)
 
     def retry_and_parse(self, prompt, parser, topic, difficulty):
         for attempt in range(settings.MAX_RETRIES):
@@ -19,6 +19,8 @@ class QuestionGenerator:
                 parsed = parser.parse(response.content)
                 self.logger.info("Successfully parsed the question"
                 )
+                # print("parsed", parsed)
+                return parsed
             except Exception as e:
                 self.logger.error(f"Error coming: {str(e)}")
                 if attempt == settings.MAX_RETRIES - 1:

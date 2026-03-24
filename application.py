@@ -21,7 +21,7 @@ def main():
         st.session_state.rerun_trigger = False 
 
     st.title("Study AI")
-    st.sidebaar.header("Quiz Settings")
+    st.sidebar.header("Quiz Settings")
     
     question_type = st.sidebar.selectbox(
         "Select Question Type",
@@ -29,7 +29,7 @@ def main():
         index=0
     )
 
-    topic = st.sidebox.text_input("Enter Topic", placeholder="Nigerian Geography, geography")
+    topic = st.sidebar.text_input("Enter Topic", placeholder="Nigerian Geography, geography")
     difficulty = st.sidebar.selectbox(
         "Difficulty Level",
         ["Easy", "Medium", "Hard"],
@@ -38,7 +38,7 @@ def main():
 
     num_questions = st.sidebar.number_input(
         "Number of questions",
-        num_value = 1, max_value=10, value=5
+        min_value = 1, max_value=10, value=5
     )
 
     if st.sidebar.button("Generate Quiz"):
