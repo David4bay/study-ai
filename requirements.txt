@@ -1,5 +1,5 @@
 langchain
 langchain-groq
 pandas
-streamlit
+streamlit>=1.40.0
 python-dotenv
