@@ -6,6 +6,6 @@ An LLM project that uses Retrieval Augmented Generation powered by a remote llm 
 
 - langchain
 - langchain-groq
-- pandasO
+- pandas
 - streamlit
 - python-dotenv
