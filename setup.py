@@ -7,7 +7,7 @@ setup(
     name="QA-LLM",
     version="0.1",
     author="Sudhanshu",
-    packages=find_packages,
+    packages=find_packages(),
     install_requires=requirements
 )
 
